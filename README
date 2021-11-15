@@ -7,19 +7,19 @@ usage
 stlsc.nix is available as a flake and nothing else. Wire that up to your
 derivation.
 
-Produced files:
-
-TODO: put an example here.
-TODO: actual docs (in the mean time, just read the very tiny derivation)
-
-alternate usage
----------------
-if you don't need to integrate this into a build system, you can just pull the
-latest built and checked certificates from CI. Because of the deps bot, these
-should never get much more than a week old.
-
 security
 --------
-no :). this is called sacrifcial, and is just for spinning up quick development
-environments for, e.g., gemini, where a tls certificate is a requirement but a
-good one is not.
+no :). this is sacrifcial for a reason, and is just for spinning up quick
+development environments for, e.g., gemini, where a tls certificate is a
+requirement but a good one is not.
+
+todos
+-----
+- set up automated testing
+- set up automated updating
+
+- docs:
+  - put an example here
+  - document the output files in result/
+
+  in the mean time, just read the very tiny derivation
