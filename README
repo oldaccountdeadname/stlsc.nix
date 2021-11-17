@@ -4,8 +4,9 @@ a sacrificial tls certificate packaged as a nix flake
 
 usage
 -----
-stlsc.nix is available as a flake and nothing else. Wire that up to your
-derivation.
+Recommended: stlsc.nix is available as a Flake, which you can wire up to your
+build system. If, however, you just need a one-off cert, you can download one
+(and all other associated information) from the most recent build artifacts.
 
 security
 --------
@@ -15,11 +16,9 @@ requirement but a good one is not.
 
 todos
 -----
-- set up automated testing
 - set up automated updating
 
 - docs:
   - put an example here
   - document the output files in result/
-
   in the mean time, just read the very tiny derivation
