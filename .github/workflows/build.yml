@@ -12,8 +12,9 @@ jobs:
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - run: nix build
+      - run: cp -Lr result out # dereference symlink
       - name: upload artifacts
         uses: actions/upload-artifact@v2
         with:
           name: TLS Certs
-          path: ./result
+          path: ./out
