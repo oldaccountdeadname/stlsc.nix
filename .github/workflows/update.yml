@@ -1,7 +1,7 @@
 name: Update Nixpkgs
 on:
-  - workflow-dispatch
-  - schedule:
+  workflow-dispatch:
+  schedule:
     # run every sunday at UTC midnight
     - cron: '00 00 * * 1'
 jobs:
