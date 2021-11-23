@@ -19,6 +19,7 @@
         };
       in {
         defaultPackage = tlsgen pkgs metadata;
+        customCert = tlsgen pkgs;
       }
     );
 }
