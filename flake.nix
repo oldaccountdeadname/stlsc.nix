@@ -6,7 +6,14 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs { inherit system; };
-        pass = "iamcommitingcrimes";
+        country = "NA";
+        state   = "SomeStateThatDefinitelyExists";
+        city    = "SomeCityThatDefinitelyExists";
+        org     = "SomeRealOrganization";
+        orgunit = "SomeRealOrganizationalUnit";
+        fqdn    = "a.real.fqdn";
+        email   = "anemail@thatis.real";
+        pass    = "iamcommitingcrimes";
       in {
         defaultPackage = pkgs.stdenv.mkDerivation {
           name = "stlsc";
@@ -14,10 +21,18 @@
           src = ./.;
 
           buildPhase = ''
-            openssl req -x509 -newkey rsa:4096 -sha256 \
-                    -passout 'pass:${pass}'            \
-                    -keyout privkey.pem \
-                    -out    tlscert.pem < opts
+            cat <<EOF | openssl req -x509 -newkey rsa:4096 -sha256 \
+                                -passout 'pass:${pass}'            \
+                                -keyout  privkey.pem               \
+                                -out     tlscert.pem
+            ${country}
+            ${state}
+            ${city}
+            ${org}
+            ${orgunit}
+            ${fqdn}
+            ${email}
+            EOF
 
             openssl pkcs12 -export -in tlscert.pem -inkey privkey.pem \
                     -password 'pass:${pass}' \
