@@ -1,5 +1,8 @@
 name: Update Nixpkgs
-on: [ workflow_dispatch ]
+on:
+  schedule:
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -11,6 +14,6 @@ jobs:
           install_options: '--tarball-url-prefix https://nixos-nix-install-tests.cachix.org/serve'
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
-      - run: nix flake update
+      - run: nix flake update --commit-lock-file --recreate-lock-file
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
