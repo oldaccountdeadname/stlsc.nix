@@ -16,6 +16,9 @@ jobs:
           nix_path: nixpkgs=channel:nixos-21.05
           extra_nix_config: |
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
+      - run: |
+        git config user.email 'lincolnauster@gmail.com'
+        git config user.name 'Update bot'
       - run: nix-env -i git -f '<nixpkgs>'
       - run: nix flake update --commit-lock-file
       - name: Create Pull Request
