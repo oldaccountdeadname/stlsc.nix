@@ -3,6 +3,7 @@ on:
   schedule:
     - cron: '0 0 * * 1'
   workflow_dispatch:
+  push: # TODO: remove this before merge, just here for testing
 jobs:
   update:
     runs-on: ubuntu-latest
