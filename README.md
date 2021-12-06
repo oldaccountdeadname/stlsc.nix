@@ -33,7 +33,8 @@ development environments for, e.g., gemini, where a tls certificate is a
 requirement but a good one is not.
 
 ## todos
-- [ ] set up automated updating
+- [x] set up automated updating
+- [ ] set up automated testing
 - [ ] docs:
   - [x] put an example here
   - [ ] document the output files in result/
