@@ -31,13 +31,15 @@ default options (see all of them in `flake.nix`).
 
 Outputs are as follows:
 
+```
 |               path | value                                       |
-|--------------------+---------------------------------------------|
+|--------------------|---------------------------------------------|
 | `$out/pass`        | the password you set during creation        |
 | `$out/privkey.pem` | the generated private key                   |
 | `$out/privkey.pem` | the generated private key                   |
 | `$out/tlscert.pem` | the generate self-signed tls cert           |
 | `$out/tlscert.pfx` | PKCS#12 export of both the key and the cert |
+```
 
 ## security
 no :). this is sacrifcial for a reason, and is just for spinning up quick
