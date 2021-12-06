@@ -49,6 +49,6 @@ requirement but a good one is not.
 ## todos
 - [x] set up automated updating
 - [ ] set up automated testing
-- [ ] docs:
+- [x] docs:
   - [x] put an example here
   - [x] document the output files in result/
