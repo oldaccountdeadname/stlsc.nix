@@ -1,6 +1,6 @@
 pkgs: metadata: pkgs.stdenv.mkDerivation {
   name = "stlsc";
-  version = "0.1.0";
+  version = "0.1.1";
   src = ./.;
 
   buildPhase = ''
