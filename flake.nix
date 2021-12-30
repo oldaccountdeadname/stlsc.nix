@@ -13,7 +13,7 @@
           city    = "SomeCityThatDefinitelyExists";
           org     = "SomeRealOrganization";
           orgunit = "SomeRealOrganizationalUnit";
-          fqdn    = "a.real.fqdn";
+          fqdn    = "localhost";
           email   = "anemail@thatis.real";
           pass    = "iamcommitingcrimes";
         };
