@@ -49,6 +49,8 @@ requirement but a good one is not.
 ## todos
 - [x] set up automated updating
 - [ ] set up automated testing
+- [ ] seeding the generation for determinism?
+- [ ] allow creation of certs with no passwords
 - [x] docs:
   - [x] put an example here
   - [x] document the output files in result/
