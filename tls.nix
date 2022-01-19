@@ -18,7 +18,6 @@ pkgs: metadata: pkgs.stdenv.mkDerivation {
     EOF
 
     openssl pkcs12 -export -in tlscert.pem -inkey privkey.pem \
-            -password 'pass:${metadata.pass}' \
             -passin   'pass:${metadata.pass}' \
             -passout  'pass:${metadata.pass}' \
             -out tlscert.pfx
