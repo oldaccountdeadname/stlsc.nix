@@ -15,7 +15,7 @@
           orgunit = "SomeRealOrganizationalUnit";
           fqdn    = "localhost";
           email   = "anemail@thatis.real";
-          pass    = "password";
+          pass    = "";
         };
       in {
         defaultPackage = tlsgen pkgs metadata;
