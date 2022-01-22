@@ -5,8 +5,11 @@ pkgs: metadata: pkgs.stdenv.mkDerivation {
 
   buildPhase = ''
     cat <<EOF | openssl req -x509 -newkey rsa:4096 -sha256 \
-                        -passout 'pass:${metadata.pass}'   \
-                        -keyout  privkey.pem               \
+                        ${if metadata.pass != ""
+                          then "-passout 'pass:${metadata.pass}'"
+                          else "-nodes"
+                        } \
+                        -keyout  privkey.pem \
                         -out     tlscert.pem
     ${metadata.country}
     ${metadata.state}
