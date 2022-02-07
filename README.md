@@ -46,10 +46,10 @@ Outputs are as follows:
 ```
 
 ## security
-no :). everythi,ng including passwords and private keys, are written
-world-readable in the nix store. this is called sacrifcial for a reason, and is
-just for spinning up quick development environments where a TLS certificate is
-a requirement but a good one is not.
+no :). everything, including passwords and private keys, are written in plain
+text and world-readable in the nix store. this is called sacrifcial for a
+reason, and is just for spinning up quick development environments where a TLS
+certificate is a requirement but a good one is not.
 
 ## todos
 - [x] set up automated updating
