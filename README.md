@@ -55,7 +55,7 @@ certificate is a requirement but a good one is not.
 - [x] set up automated updating
 - [ ] set up automated testing
 - [ ] seeding the generation for determinism?
-- [ ] allow creation of certs with no passwords
+- [x] allow creation of certs with no passwords
 - [x] docs:
   - [x] put an example here
   - [x] document the output files in result/
