@@ -6,6 +6,10 @@ Recommended: stlsc.nix is available as a Flake, which you can wire up to your
 build system. If, however, you just need a one-off cert, you can download one
 (and all other associated information) from the most recent build artifacts.
 
+For a complete example, see the devShell of systemgmi:
+
+https://github.com/lincolnauster/systemgmi/blob/dev/flake.nix#L29
+
 ### usage as an expression
 `stlsc.nix/flake.nix` contains two primary outputs: `defaultPackage.$system`,
 and `customCert.$system`. Using the latter looks like this:
@@ -42,9 +46,10 @@ Outputs are as follows:
 ```
 
 ## security
-no :). this is sacrifcial for a reason, and is just for spinning up quick
-development environments for, e.g., gemini, where a tls certificate is a
-requirement but a good one is not.
+no :). everythi,ng including passwords and private keys, are written
+world-readable in the nix store. this is called sacrifcial for a reason, and is
+just for spinning up quick development environments where a TLS certificate is
+a requirement but a good one is not.
 
 ## todos
 - [x] set up automated updating
